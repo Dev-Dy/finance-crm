@@ -1,0 +1,251 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<div class="container">
+<div class="jumbotron">
+  <h1 class="display-4">
+    Welcome to MoneyNotSleep
+  </h4>
+</div>
+      <div class="container" id="selectBoxContainer">
+        <select class="js-example-theme-single form-control" id="selectBox" style="width: 50%;">
+        </select>
+        {{!-- <button class="btn btn-primary form-control" type="button" onclick="openStockPage()">Add</button> --}}
+      </div>            
+</div>
+
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="./" class="navbar-brand">MoneyNotSleep</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Mission</a></li>
+            <li><a href="#">Vision</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Products</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li class="active">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+ 
+<section>
+<table class="flatTable" id="live-watch">
+  <tr class="titleTr">
+    <td class="titleTd">Index Stocks</td>
+    <td colspan="12"></td>
+  </tr>
+  <tr class="headingTr">
+    <td>Index Name</td>
+    <td>Previous Close</td>
+    <td>Open</td>
+    <td>High</td>
+    <td>Low</td>
+    <td>Last</td>
+    <td>%Change</td>
+    <td>Year High</td>
+    <td>Year Low</td>
+  </tr>
+  <tbody id="live-watch">
+  </tbody>
+  
+</table>
+
+{{!-- stock-gainers --}}
+<table class="flatTable" id="stock-gainers">
+  <tr class="titleTr">
+    <td class="titleTd">Top Gainers</td>
+    <td colspan="12"></td>
+  </tr>
+  <tr class="headingTr">
+    <th>Symbol</th>
+    <th>Previous Price</th>
+    <th>Open Price</th>
+    <th>High Price</th>
+    <th>Low Price</th>
+    <th>LTP</th>
+    <th>%Change</th>
+    <th>Volume</th>
+    <th>Turn Over(Lakhs)</th>
+  </tr>
+  <tbody>
+
+  </tbody>  
+</table>
+
+<table class="flatTable" id="stock-loosers">
+  <tr class="titleTr">
+    <td class="titleTd">Top Loosers</td>
+    <td colspan="12"></td>
+  </tr>
+  <tr class="headingTr">
+    <th>Symbol</th>
+    <th>Previous Price</th>
+    <th>Open Price</th>
+    <th>High Price</th>
+    <th>Low Price</th>
+    <th>LTP</th>
+    <th>%Change</th>
+    <th>Volume</th>
+    <th>Turn Over(Lakhs)</th>
+  </tr>
+  <tbody>
+
+  </tbody>  
+</table>
+<table class="flatTable" id="stock-high">
+  <tr class="titleTr">
+    <td class="titleTd">Year High</td>
+    <td colspan="12"></td>
+  </tr>
+    <tr class="headingTr">
+      <th>Symbol</th>
+      <th>Previous Price</th>
+      <th>Open Price</th>
+      <th>High Price</th>
+      <th>Low Price</th>
+      <th>LTP</th>
+      <th>%Change</th>
+      <th>Volume</th>
+      <th>Turn Over(Lakhs)</th>
+    </tr>
+  <tbody>
+
+  </tbody>  
+</table>
+<table class="flatTable" id="stock-low">
+  <tr class="titleTr">
+    <td class="titleTd">Year Low</td>
+    <td colspan="12"></td>
+  </tr>
+    <tr class="headingTr">
+      <th>Symbol</th>
+      <th>Previous Price</th>
+      <th>Open Price</th>
+      <th>High Price</th>
+      <th>Low Price</th>
+      <th>LTP</th>
+      <th>%Change</th>
+      <th>Volume</th>
+      <th>Turn Over(Lakhs)</th>
+    </tr>
+  <tbody>
+
+  </tbody>  
+</table>
+<table class="flatTable" id="stock-value">
+  <tr class="titleTr">
+    <td class="titleTd">Top Value</td>
+    <td colspan="12"></td>
+  </tr>
+    <tr class="headingTr">
+      <th>Symbol</th>
+      <th>Previous Price</th>
+      <th>Open Price</th>
+      <th>High Price</th>
+      <th>Low Price</th>
+      <th>LTP</th>
+      <th>%Change</th>
+      <th>Volume</th>
+      <th>Turn Over(Lakhs)</th>
+    </tr>
+  <tbody>
+
+  </tbody>  
+</table>
+<table class="flatTable" id="stock-volume">
+  <tr class="titleTr">
+    <td class="titleTd">Top Volume</td>
+    <td colspan="12"></td>
+  </tr>
+    <tr class="headingTr">
+      <th>Symbol</th>
+      <th>Previous Price</th>
+      <th>Open Price</th>
+      <th>High Price</th>
+      <th>Low Price</th>
+      <th>LTP</th>
+      <th>%Change</th>
+      <th>Volume</th>
+      <th>Turn Over(Lakhs)</th>
+    </tr>
+  <tbody>
+
+  </tbody>  
+</table>
+</section>
+
+  
+
+  <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">edheirojfotrgkerlnruijocedmijrio</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Important Links</h6>
+            <ul class="footer-links">
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Terms of Use</a></li>
+              <li><a href="">Disclosure</a></li>
+              <li><a href="">Disclaimer</a></li>
+              <li><a href="">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+         <a href="#">MoneyNotSleep</a>
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>

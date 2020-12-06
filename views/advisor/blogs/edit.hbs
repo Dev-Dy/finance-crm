@@ -1,0 +1,60 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<style>
+    .page-content {
+        background: #2c3e50 !important;
+        color: white;
+    }
+
+    h1.page-title {
+        font-family: 'Red Hat Display', sans-serif;
+        font-weight: 900;
+    }
+
+    h3 {
+        color: white;
+        background-color: #333;
+        padding: 12px;
+        border-top-right-radius: 20px;
+        font-weight: bolder;
+        letter-spacing: .1em;
+    }
+
+    #content {
+        height: 300px;
+        width: 1200px;
+    }
+</style>
+
+<main class="l-main">
+    <div class="page-content">
+        <h3>Add Blog</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label" for="title">Title</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" name="name" id="title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="content">Content</label>
+                                    <div class="col-sm-12">
+                                        <textarea id="content" placeholder="Write something.."></textarea>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <button type="button" class="btn btn-success" onclick="updateBlog('true')">
+                                        Publish</button>
+                                    <button type="button" class="btn btn-primary" onclick="updateBlog('false')">
+                                        Save Draft</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+</main>

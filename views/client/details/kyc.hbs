@@ -1,0 +1,96 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<style>
+    .divider-text {
+        position: relative;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .divider-text span {
+        padding: 7px;
+        font-size: 12px;
+        position: relative;   
+        z-index: 2;
+    }
+    .divider-text:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        top: 55%;
+        left: 0;
+        z-index: 1;
+    }
+
+    .btn-facebook {
+        background-color: #405D9D;
+        color: #fff;
+    }
+    .btn-twitter {
+        background-color: #42AEEC;
+        color: #fff;
+    }
+
+</style>
+
+<div class="container">
+    <div class="card bg-light">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+	        <h4 class="card-title mt-3 text-center">Complete Your Account</h4>
+	        <p class="text-center">Get started with account</p></p>
+	            <form> 
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="username" type="hidden" id='client_id'>
+                        <input name="" class="form-control" placeholder="username" type="text" id='username'>
+                    </div> 
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="Password" type="password" id='password'>
+                    </div> 
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="Full Name" type="text" id='fullname'>
+                    </div>  
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="E-mail" type="email" id='email'>
+                    </div>  
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                        </div>
+                        <select class="custom-select" style="max-width: 80px;">
+                            <option selected="">+91</option>
+                        </select>
+                        <input name="" class="form-control" placeholder="Phone number" type="text"id='phone'>
+                    </div>                                        
+                    <div class="form-group">
+                        <button  class="btn btn-primary btn-block form-control" onclick="addClient()">Save</button>
+                    </div>                                   
+                </form>
+                <button  class="btn btn-primary btn-block form-control" onclick="selectadvisor()">Next</button>
+</article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                

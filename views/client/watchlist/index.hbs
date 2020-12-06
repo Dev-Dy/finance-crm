@@ -1,0 +1,68 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<style>
+    .page-content {
+        background: #2c3e50 !important;
+        color: white;
+    }
+
+    h3 {
+        color: white;
+        background-color: #333;
+        padding: 12px;
+        border-top-right-radius: 20px;
+        font-weight: bolder;
+        letter-spacing: .1em;
+    }
+</style>
+<main class="l-main col-sm-12">
+    <div class="content-wrapper content-wrapper--with-bg col-sm-12">
+        <h1 class="page-title">Watchlist</h1>
+        <div class="page-content col-sm-12">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <h3>Watchlist</h3>
+                    <form id="addUser" action="">
+                        <label for="">Add Stock</label>
+                        <div class="form-group" id="selectBoxContainer">
+                            <select class="js-example-theme-single form-control" id="selectBox">
+                            </select>
+                        </div>
+                        <button class="btn btn-primary form-control" type="submit">Add</button>
+                    </form>
+                </div>
+                <div class="col-md-8 col-sm-8">
+                    <table id="patient-data" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>SYMBOL</th>
+                                <th>Current</th>
+                                <th>News</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="editUserModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="editUser">News</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>

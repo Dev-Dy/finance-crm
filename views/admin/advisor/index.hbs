@@ -1,0 +1,172 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<style>
+  input,
+  .modal {
+    color: black;
+  }
+
+  .table-striped>tbody>tr:nth-child(2n + 1)>td,
+  .table-striped>tbody>tr:nth-child(2n + 1)>th {
+    background-color: #34495e;
+  }
+
+  .row .alert {
+    margin-top: 25px;
+  }
+
+  th,
+  td {
+    border-top: none !important;
+  }
+
+  h3 {
+    color: white;
+    background-color: #333;
+    padding: 12px;
+    border-top-right-radius: 20px;
+    font-weight: bolder;
+    letter-spacing: .1em;
+  }
+
+  .modal-content {
+    border-radius: 0;
+  }
+
+  .modal-header,
+  .modal-footer {
+    background-color: #333;
+    color: white;
+    border: 0;
+  }
+
+  .modal-body {
+    background: #2c3e50;
+    color: white;
+  }
+
+  .close,
+  .close:hover {
+    color: white;
+  }
+
+  .btn {
+    font-weight: bolder;
+    letter-spacing: .2em;
+  }
+
+  .page-content {
+    background: #2c3e50 !important;
+    color: white;
+  }
+
+  h1.page-title {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+  }
+</style>
+<main class="l-main">
+  <div class="content-wrapper content-wrapper--with-bg">
+    <h1 class="page-title">Advisor Records</h1>
+    <div class="page-content">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Add Advisor</h3>
+          <form id="addUser" action="">
+            <div class="form-group">
+              <label for="">Username</label>
+              <input class="form-control" type="text" name="username" id="username" placeholder="username" required>
+            </div>
+            <div class="form-group">
+              <label for="">Password</label>
+              <input class="form-control" type="password" name="password" id="password" placeholder="password" required>
+            </div>
+            <div class="form-group">
+                  <label for="">Full Name</label>
+                  <input class="form-control" type="text" name="fullname"   id="fullname"
+                    placeholder="fullname" required>
+                </div>
+                <div class="form-group">
+                  <label for="">Registration Company Name</label>
+                  <input class="form-control" type="text" name="registration company"   id="reg_company"
+                    placeholder="Registartion Company"  required>
+                </div>
+                <div class="form-group">
+                  <label for="">Registration No.</label>
+                  <input class="form-control" type="number" name="registration no"   id="reg_no"
+                    placeholder="Rgistration No." required>
+                </div>
+                <div class="form-group">
+                  <label for="">E-mail</label>
+                  <input class="form-control" type="email" name="email"   id="email"
+                    placeholder="E-mail" required>
+                </div>
+                <div class="form-group">
+                  <label for="">Telephone</label>
+                  <input class="form-control" type="number" name="telephone"   id="telephone"
+                    placeholder="telephone" required>
+                </div>
+                <div class="form-group">
+                  <label for="">Fax No.</label>
+                  <input class="form-control" type="number" name="fax"   id="fax"
+                    placeholder="Fax No." required>
+                </div>
+                <div class="form-group">
+                  <label for="">Languages</label>
+                  <input class="form-control" type="text" name="language"   id="language"
+                    placeholder="Lnaguages" required>
+                </div>
+                <div class="form-group">
+                  <label for="">Permanent Address</label>
+                  <input class="form-control" type="text" name="per_address"   id="per_address"
+                    placeholder="Permanent Address" required>
+                </div>
+                <div class="form-group">
+                  <label for="">Corresponding Address</label>
+                  <input class="form-control" type="text" name="cor_address"   id="cor_address"
+                    placeholder="Corresponding Address" required>
+                </div>
+                <div class="form-group">
+                  <label for="">Liscence validity</label>
+                  <input class="form-control" type="text" name="liscence"   id="liscence_val"
+                    placeholder="liscence"  required>
+                </div>
+                
+            <button class="btn btn-primary form-control" type="submit">SUBMIT</button>
+          </form>
+        </div>
+        <div class="col-md-8">
+          <table id="patient-data" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Edit</th>
+                <th>History</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="editUserModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="editUser">Update Advisor</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>

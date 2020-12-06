@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+  <link rel='stylesheet' href='/stylesheets/dash_style.css' />
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+  <title>{{title}}</title>
+</head>
+
+<body class="sidebar-is-reduced sidebar-is-expanded">
+
+  <header class="l-header">
+    <div class="l-header__inner clearfix">
+      <div class="header-icons-group">
+        <div class="c-header-icon js-hamburger">
+        <div class="hamburger-toggle"><span class="bar-top"></span><span class="bar-mid"></span><span class="bar-bot"></span></div>
+        </div>
+        <div class="c-header-icon logout" id="logout"><i class="fa fa-power-off"></i></div>
+      </div>
+    </div>
+  </header>
+  <div class="l-sidebar">
+    <div class="logo">
+      <div class="logo__txt">MoneyNotSleep</div>
+    </div>
+    <div class="l-sidebar__content">
+      <nav class="c-menu js-menu">
+        <ul class="u-list">
+          <a href="/client/dashboard/myprofile">
+            <li class="c-menu__item is-active" data-toggle="tooltip" title="Add">
+              <div class="c-menu__item__inner"><i class="fas fa-address-card"></i>
+                <div class="c-menu-item__title"><span>My profile</span></div>
+              </div>
+            </li>
+          </a>
+            </li>
+          </a>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  {{{body}}}
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2.1.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src='/javascripts/bootstrap.min.js'></script>
+  <script src='/javascripts/fontawesome.js'></script>
+  <script src='/javascripts/dash_client_watchlist.js'></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.datatables.net/w/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-html5-1.5.6/b-print-1.5.6/r-2.2.2/datatables.min.js"></script>
+</body>
+
+</html>
