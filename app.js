@@ -6,7 +6,7 @@ var logger = require('morgan');
 var hbs = require('express-handlebars');
 var mongoose = require('mongoose');
 var session = require('express-session');
-var liveUrl = 'mongodb+srv://admin:moneybhaiya@cluster0.hft7w.mongodb.net/<dbname>?retryWrites=true&w=majority';
+var liveUrl = '';
 const bodyParser = require('body-parser');
 
 const connection = mongoose.connect(liveUrl, {
